@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: monospace !important;
+}
+
+.navbar {
+  background: transparent !important;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.navbar-inverse {
+  background: #023f5c !important;
+}
+
+.divider {
+  height: 1px;
+  background-color: black;
+  overflow: hidden;
+}
+
+#particles-js {
+  height: 100vh;
+  background-color: #252934;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: monospace !important;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.highlight {
+  color: #e31b6d;
+}

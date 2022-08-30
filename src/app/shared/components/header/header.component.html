@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" role="heading"  class="navbar position-fixed">
+  <mat-toolbar-row>
+    <span class="header-logo" (click)="scrollToTop()">Hello!</span>
+    <span class="example-spacer"></span>
+    <span class="header-items">
+      <span (click)="handleClick('aboutme')">About</span>
+      <span (click)="handleClick('resume')">Resume</span>
+      <span (click)="handleClick('skills')">Skills</span>
+      <span (click)="handleClick('contactus')">Contact</span>
+      <span [routerLink]="['/demos']" routerLinkActive="router-link-active" >Demos</span>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,20 @@
+<div class="footer">
+  <div class="icons">
+    <a mat-fab aria-label="Facebook" target="_blank" [href]="socialMediaLinks.facebook">
+      <i class="fab fa-facebook-square"></i>
+    </a>
+    <a mat-fab aria-label="LinkedIn" target="_blank" [href]="socialMediaLinks.linkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a mat-fab aria-label="Instagram" target="_blank" [href]="socialMediaLinks.instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a mat-fab aria-label="Github" target="_blank" [href]="socialMediaLinks.github">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+  <div class="divider"></div>
+  <div class="copyright text-center">
+    {{authorName}}<span class="highlight">©{{currentDate | date: 'YYYY'}}</span>
+  </div>
+</div>

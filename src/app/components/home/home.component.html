@@ -1,0 +1,150 @@
+    <div class="container">
+      <div id="particles-js"></div>
+      <div class="title">
+        <div>Hello, I'm <span>Pavan Anand.</span></div>
+        <div>I'm a full-stack web developer.</div>
+        <button mat-button (click)="goToAbout()">View my work <mat-icon>arrow_forward</mat-icon></button>
+      </div>
+
+      <div class="aboutme" id="aboutme">
+        <h1>About Me</h1>
+        <div class="divider"></div>
+        <div class="aboutme-content">
+          <div class="image">
+            <img src="/assets/imgs/myimage.jpg" height="100%" width="100%" alt="pavan anand">
+          </div>
+          <div class="text">
+            <h4>Software Engineer</h4>
+            <p class="description" data-aos="fade-left">
+              A self-motivated and passionate software engineer with 3 years of experience, collaborating on application
+              design, development, testing, implementation, and research. Expert in management of full software
+              development life-cycle for major client projects, including requirements analysis and architecture design.
+              Adept at ensuring desired outcomes through detailed planning, implementation, and post-implementation
+              monitoring to achieve success.
+            </p>
+          </div>
+        </div>
+
+        <div class="hobbies">
+          <div class="header">Things I like</div>
+          <div class="items">
+            <span class="item" *ngFor="let hobby of hobbies">{{hobby | titlecase}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume text-center" id="resume">
+        <h1>My Resume</h1>
+        <div class="divider"></div>
+        <div class="content">
+          <ul class="timeline">
+            <li class="timeline-heading center-align">
+              <div>
+                <h4>Work Experience</h4>
+              </div>
+            </li>
+            <li class="timeline-unverted">
+              <div class="timeline-badge">
+                <mat-icon>apartment</mat-icon>
+              </div>
+              <div class="timeline-panel aos-init" data-aos="fade-right">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Research Associate</h3>
+                  <span class="company"> Miracle Software Systems </span>
+                </div>
+                <div class="timeline-body">
+                  <p>My role here is to design and implement new features and scalable
+                    enhancements. Work in an Agile methodology. Deliver high-quality codes and products using JavaScript
+                    libraries like Angular, Reactjs, electron, and REST API.</p>
+                </div>
+              </div>
+            </li>
+            <br>
+            <li class="timeline-heading center-align">
+              <div>
+                <h4>Education</h4>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-badge">
+                <mat-icon>school</mat-icon>
+              </div>
+              <div class="timeline-panel" data-aos="fade-left">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Bachelor's Degree</h3>
+                  <span class="company">BVC Engineering College, India - 2013 - 2017</span>
+                </div>
+                <div class="timeline-body">
+                  <p>B.Tech degree from JNTUK</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="download-cv">
+            <h4>Download My CV</h4>
+            <button mat-fab color="primary" aria-label="Download CV">
+              <mat-icon>download</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills text-center" id="skills">
+        <h1>Skills</h1>
+        <div class="content">
+          <div class="divider"></div>
+          <div class="cards">
+            <mat-card *ngFor="let skill of skills;let i=index;" class="mat-elevation-z8 aos-init aos-animate"
+              data-aos="fade-up" data-aos-offset="100" (mouseenter)="selectedIndex=i" (mouseleave)="selectedIndex=-1">
+              <div class="logo">
+                <i [class]="skill.iconName"
+                  [ngStyle]="{color: selectedIndex === i ? skill.color: defaultLogoColor}"></i>
+                <br>
+                <div class="skill-name">{{skill.name}}</div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-us text-center" id="contactus">
+        <h1>Contact Me</h1>
+        <div class="content">
+          <div class="divider">
+          </div>
+          <div class="form-data">
+            <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
+              <div style="width: 100%;">Dear Pavan,</div>
+              <div class="row pt-3">
+                <div class="col text-right">My name is</div>
+                <div class="col">
+                  <input class="inputBox" minlength="3" name="name" formControlName="name"
+                    required="" type="text">
+                </div>
+                <div class="col text-left">and my</div>
+              </div>
+              <div class="row pt-3">
+                <div class="col text-right">email address is</div>
+                <div class="col">
+                  <input class="inputBox" email="true" name="email" formControlName="email"
+                    required="" type="email">
+                </div>
+                <div class="col text-left">I have a</div>
+              </div>
+                <div class="text-center p-10">message for you,</div>
+                <div class="text-center">
+                  <textarea class="inputBox" id="textarea" name="message" formControlName="message"
+                    required=""></textarea>
+                </div>
+              <div class="send-button">
+                <button name="action" type="submit">
+                  <i aria-hidden="true" class="fa fa-paper-plane"
+                    style="font-size: 4rem;"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>

@@ -1,0 +1,33 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .header-logo {
+    font-weight: 600;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .header-items {
+    display: flex;
+    min-width: 50%;
+    justify-content: space-evenly;
+    font-size: 22px;
+    span{
+      cursor: pointer;
+    }
+  }
+  .position-fixed {
+    position: fixed;
+  }
+
+  mat-toolbar {
+    font-family: monospace;
+    z-index: 999;
+  }
+
+ ::ng-deep .mat-toolbar-row, .mat-toolbar-single-row {
+  padding: 0 8% !important;
+  }
