@@ -26,6 +26,13 @@ export class AppComponent {
   public theme: 'blue' | 'grey' | 'red' = 'blue';
 
   constructor(private router: Router) {
+    navigator.geolocation.getCurrentPosition(resp => {
+      const location = {lng: resp.coords.longitude, lat: resp.coords.latitude};
+      // this.$gaService.event('VIEW', location.lng + '' + location.lat, 'Name');
+    },
+    err => {
+      console.log({err});
+    });
     this.router.events.subscribe((val) => {
       if (window.location.hash && (window.location.hash.includes('demos') || window.location.hash.includes('visitors'))) {
         this.isDemosPage = true;

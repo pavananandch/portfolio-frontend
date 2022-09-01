@@ -20,6 +20,10 @@ const routes: Routes = [{
 {
   path: 'demos',
   component: DemosComponent
+},{
+  path: '**',
+  redirectTo: '/home',
+  pathMatch: 'full'
 }];
 
 @NgModule({

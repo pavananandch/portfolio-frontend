@@ -1,0 +1,122 @@
+{
+    "aboutMe": "A self-motivated and passionate software engineer with 3 years of experience, collaborating on application design, development, testing, implementation, and research. Expert in management of full software development life-cycle for major client projects, including requirements analysis and architecture design. Adept at ensuring desired outcomes through detailed planning, implementation, and post-implementation monitoring to achieve success.",
+    "hobbies": [
+        "Programming",
+        "Travelling",
+        "foodie",
+        "Learning",
+        "Video Games",
+        "Building Things",
+        "Shettle",
+        "Drawing",
+        "Pets",
+        "Short Film Making",
+        "Workouts",
+        "Novel Reading"
+    ],
+    "skills": [
+        {
+            "name": "HTML",
+            "iconName": "fab fa-html5",
+            "color": "#e34c26"
+        },
+        {
+            "name": "CSS",
+            "iconName": "fab fa-css3-alt",
+            "color": "#264de4"
+        },
+        {
+            "name": "Bootstrap",
+            "iconName": "fab fa-bootstrap",
+            "color": "#602c50"
+        },
+        {
+            "name": "JavaScript",
+            "iconName": "fab fa-js",
+            "color": "#f0db4f"
+        },
+        {
+            "name": "Angular",
+            "iconName": "fab fa-angular",
+            "color": "#dd1b16"
+        },
+        {
+            "name": "Node JS",
+            "iconName": "fab fa-node-js",
+            "color": "#3c873a"
+        },
+        {
+            "name": "React JS",
+            "iconName": "fab fa-react",
+            "color": "#61dbfb"
+        },
+        {
+            "name": "Mongo DB",
+            "iconName": "fas fa-database",
+            "color": "#4db33d"
+        },
+        {
+            "name": "GIT",
+            "iconName": "fab fa-github",
+            "color": "#211f1f"
+        },
+        {
+            "name": "JIRA",
+            "iconName": "fab fa-jira",
+            "color": "#57afe5"
+        },
+        {
+            "name": "Docker",
+            "iconName": "fab fa-docker",
+            "color": "#0db7ed"
+        },
+        {
+            "name": "AWS",
+            "iconName": "fab fa-aws",
+            "color": "#f90"
+        },
+        {
+            "name": "Azure",
+            "iconName": "fab fa-microsoft",
+            "color": "#007fff"
+        },
+        {
+            "name": "Firebase",
+            "iconName": "fab fa-google",
+            "color": "#ffa611"
+        },
+        {
+            "name": "Heroku",
+            "iconName": "fas fa-cloud",
+            "color": "#6567a5"
+        },
+        {
+            "name": "Jenkins",
+            "iconName": "fab fa-jenkins",
+            "color": "#3d5a6e"
+        }
+    ],
+    "resumeLink": "https://firebasestorage.googleapis.com/v0/b/pavananand-portfolio.appspot.com/o/Pavan%20Anand%20Chinthalapudi.pdf?alt=media&token=12bbddfa-cf34-45a8-9573-bfd02b25c1b4",
+    "socialMediaLinks": {
+        "facebook": "https://www.facebook.com/pavan.anand2/",
+        "linkedIn": "https://www.linkedin.com/in/v-s-s-pavan-anand-chinthalapudi-906628125/",
+        "instagram": "https://www.instagram.com/always_pavananand/",
+        "github": "https://github.com/pavananandch"
+      },
+      "workExperience": [{
+        "designation": "Systems Analyst",
+        "companyName": "IVY Comptech",
+        "description": "My role here is to design and implement new features and scalable enhancements. Work in an Agile methodology. Deliver high-quality codes and products using JavaScript libraries like Angular, Reactjs, electron, and REST API.",
+        "duration": "May 2022 - Present"
+      },{
+        "designation": "Software Engineer",
+        "companyName": "Innominds Software",
+        "description": "In this organization my role is to work with different javascript libraries like Ionic, Angular, Electron JS. Tracking and fixing bugs using ELK stack and tracking the user event using Google Analytics to make the interface easier",
+        "duration": "Mar 2021 - May 2022"
+      },{
+        "designation": "Research Associate",
+        "companyName": "Miracle Software Systems",
+        "description": "My role here is to design and implement new features and scalable enhancements. Work in an Agile methodology. Deliver high-quality codes and products using JavaScript libraries like Angular, Reactjs, electron, and REST API.",
+        "duration": "Aug 2017 - Mar 2021"
+      }]
+}

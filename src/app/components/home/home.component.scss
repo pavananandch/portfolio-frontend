@@ -4,7 +4,7 @@
   line-height: 36pt;
   position: absolute;
   top: 38%;
-  width: 100%;
+  right: 25%;
   text-align: center;
 
   span {
@@ -216,6 +216,9 @@
 
       .timeline-inverted>.timeline-panel {
         float: right;
+        text-align: left;
+        position: relative;
+        left: 1%;
       }
 
       li {

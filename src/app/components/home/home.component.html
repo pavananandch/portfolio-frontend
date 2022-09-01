@@ -43,22 +43,38 @@
                 <h4>Work Experience</h4>
               </div>
             </li>
-            <li class="timeline-unverted">
+            <ng-container *ngFor="let company of workExperience;let i=index">
+            <li class="timeline-unverted" *ngIf="i%2 === 0">
               <div class="timeline-badge">
                 <mat-icon>apartment</mat-icon>
               </div>
               <div class="timeline-panel aos-init" data-aos="fade-right">
                 <div class="timeline-heading">
-                  <h3 class="timeline-title">Research Associate</h3>
-                  <span class="company"> Miracle Software Systems </span>
+                  <h3 class="timeline-title">{{company.designation}}</h3>
+                  <span class="company"> {{company.companyName}} </span>
+                  <span class="company"> {{company.duration}} </span>
                 </div>
                 <div class="timeline-body">
-                  <p>My role here is to design and implement new features and scalable
-                    enhancements. Work in an Agile methodology. Deliver high-quality codes and products using JavaScript
-                    libraries like Angular, Reactjs, electron, and REST API.</p>
+                  <p>{{company.description}}</p>
                 </div>
               </div>
             </li>
+            <li class="timeline-inverted" *ngIf="i%2 !== 0">
+              <div class="timeline-badge">
+                <mat-icon>apartment</mat-icon>
+              </div>
+              <div class="timeline-panel" data-aos="fade-left">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">{{company.designation}}</h3>
+                  <span class="company"> {{company.companyName}} </span>
+                  <span class="company"> {{company.duration}} </span>
+                </div>
+                <div class="timeline-body">
+                  <p>{{company.description}}</p>
+                </div>
+              </div>
+            </li>
+          </ng-container>
             <br>
             <li class="timeline-heading center-align">
               <div>
@@ -118,28 +134,25 @@
               <div class="row pt-3">
                 <div class="col text-right">My name is</div>
                 <div class="col">
-                  <input class="inputBox" minlength="3" name="name" formControlName="name"
-                    required="" type="text">
+                  <input class="inputBox" minlength="3" name="name" formControlName="name" required="" type="text">
                 </div>
                 <div class="col text-left">and my</div>
               </div>
               <div class="row pt-3">
                 <div class="col text-right">email address is</div>
                 <div class="col">
-                  <input class="inputBox" email="true" name="email" formControlName="email"
-                    required="" type="email">
+                  <input class="inputBox" email="true" name="email" formControlName="email" required="" type="email">
                 </div>
                 <div class="col text-left">I have a</div>
               </div>
-                <div class="text-center p-10">message for you,</div>
-                <div class="text-center">
-                  <textarea class="inputBox" id="textarea" name="message" formControlName="message"
-                    required=""></textarea>
-                </div>
+              <div class="text-center p-10">message for you,</div>
+              <div class="text-center">
+                <textarea class="inputBox" id="textarea" name="message" formControlName="message"
+                  required=""></textarea>
+              </div>
               <div class="send-button">
                 <button name="action" type="submit">
-                  <i aria-hidden="true" class="fa fa-paper-plane"
-                    style="font-size: 4rem;"></i>
+                  <i aria-hidden="true" class="fa fa-paper-plane" style="font-size: 4rem;"></i>
                 </button>
               </div>
             </form>
