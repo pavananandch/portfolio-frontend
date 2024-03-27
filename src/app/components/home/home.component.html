@@ -11,7 +11,7 @@
         <div class="divider"></div>
         <div class="aboutme-content">
           <div class="image">
-            <img src="/assets/imgs/myimage.jpg" height="100%" width="100%" alt="pavan anand">
+            <img style="border-radius: 50%;" src="/assets/imgs/pavananand.jpg" height="100%" width="100%" alt="pavan anand">
           </div>
           <div class="text">
             <h4>Software Engineer</h4>
@@ -98,7 +98,7 @@
           </ul>
           <div class="download-cv">
             <h4>Download My CV</h4>
-            <button mat-fab color="primary" aria-label="Download CV">
+            <button (click)="downloadResume()" mat-fab color="primary" aria-label="Download CV">
               <mat-icon>download</mat-icon>
             </button>
           </div>

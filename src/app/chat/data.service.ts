@@ -7,15 +7,16 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 })
 export class DataService {
 
+  baseURL = "https://portfolio-backend-dsp9.onrender.com/";
   constructor(private http: HttpClient) { }
 
   getbotResponse(body: any): Observable<any> {
     return this.http
-      .post('https://pavananand-portfolio.herokuapp.com/api/bot',body);
+      .post(this.baseURL + 'api/bot',body);
   }
 
   getVisitorsResponse(): Observable<any> {
     return this.http
-      .get('https://pavananand-portfolio.herokuapp.com/api/getVisitors');
+      .get(this.baseURL + 'api/getVisitors');
   }
 }

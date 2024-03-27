@@ -101,7 +101,7 @@ export class HomeComponent implements OnInit {
   selectedIndex = -1;
   defaultLogoColor = '#000000de';
   myForm: FormGroup = null as any;
-  
+
   constructor(private fb: FormBuilder, private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
@@ -135,5 +135,17 @@ export class HomeComponent implements OnInit {
 
   public goToAbout(){
     this.viewportScroller.scrollToAnchor('aboutme');
+  }
+
+  downloadResume() {
+    // Path to your PDF file
+    const pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/pavananand-portfolio.appspot.com/o/pavan_anand_resume.pdf?alt=media&token=e232af6d-1fb8-445d-8506-6cbf81e24ae2';
+
+    // Triggering download
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.target = '_blank';
+    link.download = 'pavananand_resume.pdf'; // Filename to be downloaded
+    link.click();
   }
 }
