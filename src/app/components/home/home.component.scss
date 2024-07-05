@@ -4,7 +4,7 @@
   line-height: 36pt;
   position: absolute;
   top: 38%;
-  right: 25%;
+  width: 100%;
   text-align: center;
 
   span {
@@ -19,7 +19,6 @@
     border: 2px solid #fff;
     color: #fff;
     font-size: 2vw;
-    width: -moz-fit-content;
     width: fit-content;
     transform: scale(1);
     z-index: 3;
@@ -53,76 +52,79 @@
 .aboutme {
   overflow: auto;
   padding: 2% 8%;
-  background: linear-gradient(73deg, #9fadc3 5%, #a5b5cb 51%, #89a1c4 95%);
+  background: linear-gradient(73deg, #9fadc3 5%, #a5b5cf 27%, #bac8e2 68%, #d0d8e3 88%);
+  border-top: 10px solid #e31b6d;
+  box-shadow: 0 3px 6px #000000;
 
   h1 {
     text-align: center;
-    font-size: 4.2rem;
     margin-top: 3%;
-    padding: 2% 0px;
+    color: #000000;
+    font-size: 4rem;
+    text-transform: uppercase;
   }
 
   .aboutme-content {
-    width: 100%;
-    margin-top: 2%;
-    overflow-y: auto;
-    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // text-align: justify;
+    padding: 1rem 0;
+    flex-wrap: wrap;
 
     .image {
-      width: 28%;
-      float: left;
+      flex: 1;
+      max-width: 300px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
     }
 
     .text {
-      width: 70%;
-      float: right;
-      font-size: 1.5em;
-      text-align: justify;
-
+      flex: 2;
+      padding-left: 2rem;
       h4 {
-        font-size: 2.28rem;
+        text-transform: uppercase;
         text-align: center;
-        font-family: monospace;
+        font-size: 2rem;
+        font-weight: bold;
       }
 
-      .description {
-        text-align: justify;
-        line-height: 1.5;
+      p {
+        font-size: 20px;
+        color: #000;
+        line-height: 38px;
       }
     }
   }
 
   .hobbies {
-    color: black;
-    font-family: monospace;
-    padding-top: 5px;
-    text-align: center;
+    margin-top: 2rem;
 
     .header {
-      font-family: monospace;
-      font-weight: 500;
-      font-size: 24px;
-      padding: 1%;
+      font-size: 20px;
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+      color: #000;
     }
 
     .items {
       display: flex;
-      justify-content: space-evenly;
       flex-wrap: wrap;
-    }
 
-    .item {
-      background: #007bff;
-      border-radius: 18px;
-      padding: 6px 10px;
-      color: white;
-      margin: 5px 2px;
-      transition: box-shadow .25s ease 0s;
-      cursor: pointer;
-    }
-
-    .item:hover {
-      box-shadow: rgb(0 0 0 / 20%) 0 8px 17px 0, rgb(0 0 0 / 19%) 0 6px 20px 0;
+      .item {
+        background: #007bff;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 3px 6px #000000;
+        color: #fff;
+        transition: box-shadow .25s ease 0s;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -292,16 +294,18 @@
     .cards {
       width: 100%;
       padding-top: 1%;
+      display: flex;
+      flex-wrap: wrap;
 
       mat-card {
-        width: 20%;
-        height: 32vh;
+        width: 18vw;
+        height: 42vh;
         background-color: transparent;
         float: left;
         margin: 10px;
 
         .logo {
-          padding: 0.2rem 2rem;
+          // padding: 0.2rem 2rem;
 
           i {
             font-size: 10em;
@@ -388,5 +392,171 @@
       }
     }
 
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20pt;
+    line-height: 24pt;
+  }
+
+  .aboutme-content {
+    flex-direction: column;
+    .text {
+      p {
+        line-break: anywhere;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .aboutme .text {
+    padding-left: 0;
+  }
+.resume {
+  .content {
+
+    .timeline:before {
+      left: 8vw;
+      margin-left: 0;
+    }
+    .timeline {
+
+      .timeline-heading>div h4 {
+        font-size: 20px !important;
+        letter-spacing: 6px  !important;
+        padding: 10px  !important;
+      }
+      .timeline-inverted>.timeline-panel {
+        width: 100%;
+        float: none;
+      }
+
+      .timeline-badge {
+        left: 10%;
+      }
+    }
+  }
+}
+
+  .timeline > li {
+    margin-bottom: 30px;
+  }
+
+  .timeline-panel {
+    width: 90%;
+  }
+
+  .timeline-inverted .timeline-panel {
+    // float: right;
+    width: 100%;
+    width: 82%;
+    margin-left: 17vw;
+  }
+
+  .skills .cards mat-card {
+    width: 45%;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 16pt;
+    line-height: 20pt;
+    button {
+      width: 200px;
+      font-size: 20px;
+    }
+  }
+  .aboutme {
+    h1{
+      margin-top: 12%;
+    }
+    p {
+      line-height: 21px;
+    }
+  }
+
+  .aboutme-content {
+    padding: 1rem;
+  }
+
+  .hobbies .header {
+    font-size: 2rem;
+  }
+
+  .resume h1,
+  .skills h1,
+  .contact-us h1 {
+    font-size: 4rem;
+  }
+
+  .resume {
+    .content {
+      padding: 0px;
+      .timeline:before {
+        left: 8vw;
+        margin-left: 0;
+      }
+      .timeline {
+
+        .timeline-heading>div h4 {
+          font-size: 20px !important;
+          letter-spacing: 6px  !important;
+          padding: 10px  !important;
+          text-align: left;
+        }
+        .timeline-unverted {
+          text-align: left;
+      }
+      li {
+        float: left;
+        .timeline-panel {
+          width: 100%;
+          width: 82%;
+          margin-left: 17vw;
+        }
+
+        .timeline-badge {
+          left: 10%;
+        }
+      }
+      }
+    }
+  }
+
+  .skills {
+    .content {
+      .cards {
+        mat-card {
+          width: 30vw;
+          height: 15vh;
+          .logo {
+            i {
+              font-size: 104px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .skills .cards mat-card {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .contact-us .form-data {
+    padding: 1rem;
+  }
+
+  .inputBox {
+    padding: 0.5rem;
+  }
+
+  .send-button button {
+    padding: 0.5rem 1rem;
   }
 }

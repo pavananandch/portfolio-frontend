@@ -19,4 +19,8 @@ export class DataService {
     return this.http
       .get(this.baseURL + 'api/getVisitors');
   }
+
+  postVisitorResponse(payload: any) {
+    return this.http.post(this.baseURL + 'api/insert', payload);
+  }
 }
