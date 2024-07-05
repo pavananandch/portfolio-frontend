@@ -151,7 +151,7 @@ export class HomeComponent implements OnInit {
 
   downloadResume() {
     // Path to your PDF file
-    const pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/pavananand-portfolio.appspot.com/o/pavan_anand_resume.pdf?alt=media&token=e232af6d-1fb8-445d-8506-6cbf81e24ae2';
+    const pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/pavananand-portfolio.appspot.com/o/pavan_anand_resume.pdf?alt=media&token=e804d6bf-4f6a-4144-b934-774abe0f58f9';
 
     // Triggering download
     const link = document.createElement('a');
