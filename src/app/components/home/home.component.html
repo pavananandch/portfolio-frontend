@@ -1,37 +1,37 @@
-    <div class="container">
-      <div id="particles-js"></div>
-      <div class="title">
-        <div>Hello, I'm <span>Pavan Anand.</span></div>
-        <div>I'm a full-stack web developer.</div>
-        <button mat-button (click)="goToAbout()">View my work <mat-icon>arrow_forward</mat-icon></button>
-      </div>
+<div class="container">
+  <div id="particles-js"></div>
+  <div class="title">
+    <div>Hello, I'm <span>Pavan Anand.</span></div>
+    <div>I'm a full-stack web developer.</div>
+    <button mat-button (click)="goToAbout()">View my work <mat-icon>arrow_forward</mat-icon></button>
+  </div>
 
-      <div class="aboutme" id="aboutme">
-        <h1>About Me</h1>
-        <div class="divider"></div>
-        <div class="aboutme-content">
-          <div class="image">
-            <img style="border-radius: 50%;" src="/assets/imgs/pavananand.jpg" height="100%" width="100%" alt="pavan anand">
-          </div>
-          <div class="text">
-            <h4>Software Engineer</h4>
-            <p class="description" data-aos="fade-left">
-              A self-motivated and passionate software engineer with 3 years of experience, collaborating on application
-              design, development, testing, implementation, and research. Expert in management of full software
-              development life-cycle for major client projects, including requirements analysis and architecture design.
-              Adept at ensuring desired outcomes through detailed planning, implementation, and post-implementation
-              monitoring to achieve success.
-            </p>
-          </div>
-        </div>
-
-        <div class="hobbies">
-          <div class="header">Things I like</div>
-          <div class="items">
-            <span class="item" *ngFor="let hobby of hobbies">{{hobby | titlecase}}</span>
-          </div>
-        </div>
+  <div class="aboutme" id="aboutme">
+    <h1>About Me</h1>
+    <div class="divider"></div>
+    <div class="aboutme-content">
+      <div class="image">
+        <img style="border-radius: 50%;" src="/assets/imgs/pavananand.jpg" alt="pavan anand">
       </div>
+      <div class="text">
+        <h4>Senior Software Engineer</h4>
+        <p class="description" data-aos="fade-left">
+          A self-motivated and passionate software engineer with 3 years of experience, collaborating on application
+          design, development, testing, implementation, and research. Expert in management of full software
+          development life-cycle for major client projects, including requirements analysis and architecture design.
+          Adept at ensuring desired outcomes through detailed planning, implementation, and post-implementation
+          monitoring to achieve success.
+        </p>
+      </div>
+    </div>
+
+    <!-- <div class="hobbies">
+      <div class="header">Things I like</div>
+      <div class="items">
+        <span class="item" *ngFor="let hobby of hobbies">{{hobby | titlecase}}</span>
+      </div>
+    </div> -->
+  </div>
 
       <div class="resume text-center" id="resume">
         <h1>My Resume</h1>
@@ -123,41 +123,68 @@
         </div>
       </div>
 
-      <div class="contact-us text-center" id="contactus">
-        <h1>Contact Me</h1>
-        <div class="content">
-          <div class="divider">
+  <div class="contact-us text-center" id="contactus">
+    <h1>Contact Me</h1>
+    <div class="content">
+      <div class="divider">
+      </div>
+      <div class="form-data">
+        <form>
+          <div class="row center-align">Dear Pavan,</div>
+          <div class="row">
+            <div class="col s12 l4 right-align rightToCenterText">My name is</div>
+            <div class="col s12 l4"><input class="inputBox" minlength="3" placeholder="(your name here)" required="" type="text"
+                value=""></div>
+            <div class="col s12 l4 left-align leftToCenterText">and my</div>
           </div>
-          <div class="form-data">
-            <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
-              <div style="width: 100%;">Dear Pavan,</div>
-              <div class="row pt-3">
-                <div class="col text-right">My name is</div>
-                <div class="col">
-                  <input class="inputBox" minlength="3" name="name" formControlName="name" required="" type="text">
-                </div>
-                <div class="col text-left">and my</div>
-              </div>
-              <div class="row pt-3">
-                <div class="col text-right">email address is</div>
-                <div class="col">
-                  <input class="inputBox" email="true" name="email" formControlName="email" required="" type="email">
-                </div>
-                <div class="col text-left">I have a</div>
-              </div>
-              <div class="text-center p-10">message for you,</div>
-              <div class="text-center">
-                <textarea class="inputBox" id="textarea" name="message" formControlName="message"
-                  required=""></textarea>
-              </div>
-              <div class="send-button">
-                <button name="action" type="submit">
-                  <i aria-hidden="true" class="fa fa-paper-plane" style="font-size: 4rem;"></i>
-                </button>
-              </div>
-            </form>
+          <div class="row">
+            <div class="col s12 l4 right-align rightToCenterText">email address is</div>
+            <div class="col s12 l4"><input class="inputBox" placeholder="(your email address)" required="" type="email"
+                value=""></div>
+            <div class="col s12 l4 left-align leftToCenterText">I have a</div>
           </div>
-        </div>
+          <div class="row">
+            <div class="col s12 center-align" style="width: 100%;">message for you,</div>
+            <div class="col s12" style="width: 100%;"><textarea class="inputBox" id="textarea" placeholder="(your msg here)" required=""></textarea>
+            </div>
+          </div>
+          <div class="send-button center-align"><button name="action" ><svg aria-hidden="true" focusable="false"
+                data-prefix="fas" data-icon="paper-plane" class="svg-inline--fa fa-paper-plane fa-3x " role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z">
+                </path>
+              </svg></button></div>
+        </form>
+        <!-- <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
+          <div style="width: 100%;">Dear Pavan,</div>
+          <div class="row pt-3">
+            <div class="col text-right">My name is</div>
+            <div class="col">
+              <input class="inputBox" minlength="3" name="name" formControlName="name" required="" type="text">
+            </div>
+            <div class="col text-left">and my</div>
+          </div>
+          <div class="row pt-3">
+            <div class="col text-right">email address is</div>
+            <div class="col">
+              <input class="inputBox" email="true" name="email" formControlName="email" required="" type="email">
+            </div>
+            <div class="col text-left">I have a</div>
+          </div>
+          <div class="text-center p-10">message for you,</div>
+          <div class="text-center">
+            <textarea class="inputBox" id="textarea" name="message" formControlName="message"
+              required=""></textarea>
+          </div>
+          <div class="send-button">
+            <button name="action" type="submit">
+              <i aria-hidden="true" class="fa fa-paper-plane" style="font-size: 4rem;"></i>
+            </button>
+          </div>
+        </form> -->
       </div>
     </div>
-    <app-footer></app-footer>
+  </div>
+</div>
+<app-footer></app-footer>

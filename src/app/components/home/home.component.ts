@@ -2,6 +2,7 @@ import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ParticlesConfig } from './particles-config';
+import { DataService } from 'src/app/chat/data.service';
 
 declare let particlesJS: any;
 declare let AOS: any;
@@ -102,7 +103,7 @@ export class HomeComponent implements OnInit {
   defaultLogoColor = '#000000de';
   myForm: FormGroup = null as any;
 
-  constructor(private fb: FormBuilder, private viewportScroller: ViewportScroller) { }
+  constructor(private fb: FormBuilder, private viewportScroller: ViewportScroller, private data: DataService) { }
 
   ngOnInit(): void {
     AOS.init();
@@ -124,10 +125,21 @@ export class HomeComponent implements OnInit {
 
   public async submitHandler(){
     const formValue = this.myForm.value;
-
     try {
+      console.log({formValue});
+
+      this.data.postVisitorResponse(formValue).subscribe({
+        next: (res) => {
+          alert("posted your response");
+        },
+        error: (error) => {
+          console.log({error});
+
+        }
+      })
       // await this.afs.collection('contacts').add(formValue);
       // this.success = true;
+      // this.data
     } catch(err) {
       console.error(err)
     }

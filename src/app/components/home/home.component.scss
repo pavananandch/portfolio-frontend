@@ -1,10 +1,19 @@
+.aboutme h1,
+  .resume h1,
+  .skills h1,
+  .contact-us h1 {
+    padding-top: 3%;
+    font-size: 3rem;
+    margin-top:3vh;
+  }
+
 .title {
   color: #fff;
   font-size: 32pt;
   line-height: 36pt;
   position: absolute;
   top: 38%;
-  right: 25%;
+  width: 100%;
   text-align: center;
 
   span {
@@ -19,7 +28,6 @@
     border: 2px solid #fff;
     color: #fff;
     font-size: 2vw;
-    width: -moz-fit-content;
     width: fit-content;
     transform: scale(1);
     z-index: 3;
@@ -53,79 +61,81 @@
 .aboutme {
   overflow: auto;
   padding: 2% 8%;
-  background: linear-gradient(73deg, #9fadc3 5%, #a5b5cb 51%, #89a1c4 95%);
+  background: linear-gradient(73deg, #9fadc3 5%, #a5b5cf 27%, #bac8e2 68%, #d0d8e3 88%);
+  border-top: 10px solid #e31b6d;
+  box-shadow: 0 3px 6px #000000;
 
   h1 {
     text-align: center;
-    font-size: 4.2rem;
-    margin-top: 3%;
-    padding: 2% 0px;
+    color: #000000;
+    text-transform: uppercase;
   }
 
   .aboutme-content {
-    width: 100%;
-    margin-top: 2%;
-    overflow-y: auto;
-    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // text-align: justify;
+    padding: 1rem 0;
+    flex-wrap: wrap;
 
     .image {
-      width: 28%;
-      float: left;
+      flex: 1;
+      max-width: 300px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
     }
 
     .text {
-      width: 70%;
-      float: right;
-      font-size: 1.5em;
-      text-align: justify;
-
+      flex: 2;
+      padding-left: 2rem;
       h4 {
-        font-size: 2.28rem;
+        text-transform: uppercase;
         text-align: center;
-        font-family: monospace;
+        font-size: 2rem;
+        font-weight: bold;
       }
 
-      .description {
-        text-align: justify;
-        line-height: 1.5;
+      p {
+        font-size: 20px;
+        color: #000;
+        line-height: 38px;
       }
     }
   }
 
   .hobbies {
-    color: black;
-    font-family: monospace;
-    padding-top: 5px;
-    text-align: center;
+    margin-top: 2rem;
 
     .header {
-      font-family: monospace;
-      font-weight: 500;
-      font-size: 24px;
-      padding: 1%;
+      font-size: 20px;
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+      color: #000;
     }
 
     .items {
       display: flex;
-      justify-content: space-evenly;
       flex-wrap: wrap;
-    }
 
-    .item {
-      background: #007bff;
-      border-radius: 18px;
-      padding: 6px 10px;
-      color: white;
-      margin: 5px 2px;
-      transition: box-shadow .25s ease 0s;
-      cursor: pointer;
-    }
-
-    .item:hover {
-      box-shadow: rgb(0 0 0 / 20%) 0 8px 17px 0, rgb(0 0 0 / 19%) 0 6px 20px 0;
+      .item {
+        background: #007bff;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 3px 6px #000000;
+        color: #fff;
+        transition: box-shadow .25s ease 0s;
+        cursor: pointer;
+      }
     }
   }
 }
+
 
 .resume {
   background: linear-gradient(90deg, #3b7581, #41418b 71%, #3b7581);
@@ -137,11 +147,6 @@
 
   .divider {
     background-color: white;
-  }
-
-  h1 {
-    font-size: 3em;
-    margin: 4% 0px;
   }
 
   .content {
@@ -279,29 +284,23 @@
   -moz-box-shadow: 0 0 5px 5px #888;
   -webkit-box-shadow: 0 0 5px 5px #888;
 
-  h1 {
-    font-size: 4rem;
-    margin: 0;
-    margin-top:4%;
-    padding: 2% 0%;
-  }
-
   .content {
-    padding: 0% 7%;
+    padding: 0 6%;
 
     .cards {
       width: 100%;
       padding-top: 1%;
+      display: flex;
+      flex-wrap: wrap;
 
       mat-card {
-        width: 20%;
-        height: 32vh;
+        width: 18vw;
         background-color: transparent;
         float: left;
         margin: 10px;
 
         .logo {
-          padding: 0.2rem 2rem;
+          // padding: 0.2rem 2rem;
 
           i {
             font-size: 10em;
@@ -325,12 +324,6 @@
   background: linear-gradient(90deg, #3b7581, #41418b 71%, #3b7581);
   box-shadow: 0 0 5px 5px #888;
 
-  h1 {
-    font-size: 4rem;
-    margin: 0;
-    padding: 3% 0%;
-  }
-
   .content {
     padding: 0% 7%;
 
@@ -346,9 +339,21 @@
       border: none;
       color: #ccc;
       cursor: pointer;
+      width: 4%;
     }
     .form-data {
-      margin-top: 5%;
+      margin-top: 3%;
+      .row {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center-align {
+        text-align: center;
+      }
+      .second-para {
+        display: flex;
+      }
 
       .text-right {
         text-align: right;
@@ -359,6 +364,7 @@
       .text-center{
         text-align: center;
       }
+
 
       .p-10{
         padding: 10px;
@@ -373,12 +379,32 @@
         border-bottom: 2px dashed white;
         color: rgba(255, 255, 255, 0.5);
         outline: none;
+        font-family: Lato, georgia;
+        font-size: 25px;
+        text-align: center;
+        color: hsla(0, 0%, 100%, .5);
       }
 
       .col {
         float: left;
         width: 30%;
         padding: 10px;
+      }
+      .rightToCenterText {
+        text-align: right;
+      }
+      .right-align {
+        text-align: right;
+      }
+      .leftToCenterText {
+        text-align: left;
+      }
+
+      .left-align {
+        text-align: left;
+      }
+      .center-align {
+        text-align: center;
       }
 
       .row:after {
@@ -388,5 +414,185 @@
       }
     }
 
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20pt;
+    line-height: 24pt;
+  }
+
+  .aboutme-content {
+    flex-direction: column;
+    .text {
+      p {
+        line-break: anywhere;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .aboutme .text {
+    padding-left: 0;
+  }
+.resume {
+  .content {
+
+    .timeline:before {
+      left: 8vw;
+      margin-left: 0;
+    }
+    .timeline {
+
+      .timeline-heading>div h4 {
+        font-size: 20px !important;
+        letter-spacing: 6px  !important;
+        padding: 10px  !important;
+      }
+      .timeline-inverted>.timeline-panel {
+        width: 100%;
+        float: none;
+      }
+
+      .timeline-badge {
+        left: 10%;
+      }
+    }
+  }
+}
+
+  .timeline > li {
+    margin-bottom: 30px;
+  }
+
+  .timeline-panel {
+    width: 90%;
+  }
+
+  .timeline-inverted .timeline-panel {
+    // float: right;
+    width: 100%;
+    width: 82%;
+    margin-left: 17vw;
+  }
+
+  .skills .cards mat-card {
+    width: 45%;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 16pt;
+    line-height: 20pt;
+    button {
+      width: 200px;
+      font-size: 20px;
+    }
+  }
+  .aboutme {
+    p {
+      line-height: 21px;
+    }
+  }
+
+  .aboutme .aboutme-content {
+    padding: 1rem;
+  }
+
+  .aboutme .aboutme-content .text {
+    padding-left: 0;
+  }
+
+  .hobbies .header {
+    font-size: 2rem;
+  }
+
+  .aboutme h1,
+  .resume h1,
+  .skills h1,
+  .contact-us h1 {
+    padding-top: 3%;
+    font-size: 3rem;
+    margin-top:3vh;
+  }
+
+  .resume {
+    .content {
+      padding: 0px;
+      .download-cv {
+        margin-bottom: 4vw;
+      }
+      .timeline:before {
+        left: 8vw;
+        margin-left: 0;
+      }
+      .timeline {
+        .timeline-heading>div h4 {
+          font-size: 20px !important;
+          letter-spacing: 6px  !important;
+          padding: 10px  !important;
+          text-align: left;
+        }
+        .timeline-unverted {
+          text-align: left;
+      }
+      li {
+        float: left;
+        .timeline-panel {
+          width: 100%;
+          width: 82%;
+          margin-left: 17vw;
+        }
+
+        .timeline-badge {
+          left: 10%;
+        }
+      }
+      }
+    }
+  }
+
+  .skills {
+    .content {
+      .cards {
+        mat-card {
+          width: 30vw;
+          height: 15vh;
+          .logo {
+            i {
+              font-size: 104px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .skills .cards mat-card {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .contact-us .form-data {
+    padding: 1rem;
+    .col {
+      display: block;
+      width: 100% !important;
+      text-align: center !important;
+    }
+  }
+
+  .inputBox {
+    padding: 0.5rem;
+  }
+
+  .contact-us .form-data .send-button button {
+    padding: 0.5rem 1rem;
+    width: 20%;
   }
 }

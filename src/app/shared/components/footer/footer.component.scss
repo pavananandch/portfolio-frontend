@@ -73,3 +73,11 @@
     padding: 1%;
   }
 }
+
+@media (max-width: 480px) {
+  .footer {
+    .icons {
+      padding: 0;
+    }
+  }
+}

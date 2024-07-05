@@ -1,7 +1,7 @@
 .example-icon {
     padding: 0 14px;
   }
-  
+
   .example-spacer {
     flex: 1 1 auto;
   }
@@ -31,3 +31,49 @@
  ::ng-deep .mat-toolbar-row, .mat-toolbar-single-row {
   padding: 0 8% !important;
   }
+
+  /* Media query for tablets and small desktops */
+@media (max-width: 1024px) {
+  .header-logo {
+    font-size: 1.2em; /* Decrease logo font size */
+  }
+
+  .header-items {
+    font-size: 18px; /* Decrease menu item font size */
+    min-width: unset; /* Allow menu items to wrap */
+    justify-content: center; /* Center align menu items */
+  }
+
+  .example-icon {
+    padding: 0 8px; /* Reduce icon padding */
+  }
+
+  ::ng-deep .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    padding: 0 5% !important; /* Adjust toolbar row padding */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .header-logo {
+    font-size: 1em; /* Further reduce logo font size */
+  }
+
+  .header-items {
+    font-size: 16px; /* Further decrease menu item font size */
+    align-items: center; /* Center align menu items */
+    padding-top: 10px; /* Add top padding to menu items */
+    width: 75%;
+    justify-content: space-between;
+  }
+
+  .example-icon {
+    padding: 0 6px; /* Reduce icon padding */
+  }
+
+  ::ng-deep .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    padding: 0 3% !important; /* Further adjust toolbar row padding */
+  }
+}
