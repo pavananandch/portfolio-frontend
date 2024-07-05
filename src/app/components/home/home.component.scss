@@ -129,6 +129,7 @@
   }
 }
 
+
 .resume {
   background: linear-gradient(90deg, #3b7581, #41418b 71%, #3b7581);
   padding: 4% 0 1%;
@@ -299,7 +300,6 @@
 
       mat-card {
         width: 18vw;
-        height: 42vh;
         background-color: transparent;
         float: left;
         margin: 10px;
@@ -350,9 +350,21 @@
       border: none;
       color: #ccc;
       cursor: pointer;
+      width: 4%;
     }
     .form-data {
-      margin-top: 5%;
+      margin-top: 3%;
+      .row {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center-align {
+        text-align: center;
+      }
+      .second-para {
+        display: flex;
+      }
 
       .text-right {
         text-align: right;
@@ -363,6 +375,7 @@
       .text-center{
         text-align: center;
       }
+
 
       .p-10{
         padding: 10px;
@@ -377,12 +390,32 @@
         border-bottom: 2px dashed white;
         color: rgba(255, 255, 255, 0.5);
         outline: none;
+        font-family: Lato, georgia;
+        font-size: 25px;
+        text-align: center;
+        color: hsla(0, 0%, 100%, .5);
       }
 
       .col {
         float: left;
         width: 30%;
         padding: 10px;
+      }
+      .rightToCenterText {
+        text-align: right;
+      }
+      .right-align {
+        text-align: right;
+      }
+      .leftToCenterText {
+        text-align: left;
+      }
+
+      .left-align {
+        text-align: left;
+      }
+      .center-align {
+        text-align: center;
       }
 
       .row:after {
@@ -394,6 +427,8 @@
 
   }
 }
+
+
 
 @media (max-width: 768px) {
   .title {
@@ -496,12 +531,14 @@
   .resume {
     .content {
       padding: 0px;
+      .download-cv {
+        margin-bottom: 4vw;
+      }
       .timeline:before {
         left: 8vw;
         margin-left: 0;
       }
       .timeline {
-
         .timeline-heading>div h4 {
           font-size: 20px !important;
           letter-spacing: 6px  !important;
@@ -550,13 +587,19 @@
 
   .contact-us .form-data {
     padding: 1rem;
+    .col {
+      display: block;
+      width: 100% !important;
+      text-align: center !important;
+    }
   }
 
   .inputBox {
     padding: 0.5rem;
   }
 
-  .send-button button {
+  .contact-us .form-data .send-button button {
     padding: 0.5rem 1rem;
+    width: 20%;
   }
 }
