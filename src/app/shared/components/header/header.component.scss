@@ -62,9 +62,10 @@
 
   .header-items {
     font-size: 16px; /* Further decrease menu item font size */
-    flex-direction: column; /* Stack menu items vertically */
     align-items: center; /* Center align menu items */
     padding-top: 10px; /* Add top padding to menu items */
+    width: 75%;
+    justify-content: space-between;
   }
 
   .example-icon {

@@ -1,3 +1,12 @@
+.aboutme h1,
+  .resume h1,
+  .skills h1,
+  .contact-us h1 {
+    padding-top: 3%;
+    font-size: 3rem;
+    margin-top:3vh;
+  }
+
 .title {
   color: #fff;
   font-size: 32pt;
@@ -58,9 +67,7 @@
 
   h1 {
     text-align: center;
-    margin-top: 3%;
     color: #000000;
-    font-size: 4rem;
     text-transform: uppercase;
   }
 
@@ -140,11 +147,6 @@
 
   .divider {
     background-color: white;
-  }
-
-  h1 {
-    font-size: 3em;
-    margin: 4% 0px;
   }
 
   .content {
@@ -282,15 +284,8 @@
   -moz-box-shadow: 0 0 5px 5px #888;
   -webkit-box-shadow: 0 0 5px 5px #888;
 
-  h1 {
-    font-size: 4rem;
-    margin: 0;
-    margin-top:4%;
-    padding: 2% 0%;
-  }
-
   .content {
-    padding: 0% 7%;
+    padding: 0 6%;
 
     .cards {
       width: 100%;
@@ -328,12 +323,6 @@
   background: #36adc6;
   background: linear-gradient(90deg, #3b7581, #41418b 71%, #3b7581);
   box-shadow: 0 0 5px 5px #888;
-
-  h1 {
-    font-size: 2rem;
-    margin: 0;
-    padding: 3% 0%;
-  }
 
   .content {
     padding: 0% 7%;
@@ -506,26 +495,30 @@
     }
   }
   .aboutme {
-    h1{
-      margin-top: 12%;
-    }
     p {
       line-height: 21px;
     }
   }
 
-  .aboutme-content {
+  .aboutme .aboutme-content {
     padding: 1rem;
+  }
+
+  .aboutme .aboutme-content .text {
+    padding-left: 0;
   }
 
   .hobbies .header {
     font-size: 2rem;
   }
 
+  .aboutme h1,
   .resume h1,
   .skills h1,
   .contact-us h1 {
-    font-size: 4rem;
+    padding-top: 3%;
+    font-size: 3rem;
+    margin-top:3vh;
   }
 
   .resume {
