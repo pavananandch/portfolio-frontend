@@ -7,10 +7,9 @@ import { DataService } from './data.service'
 import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
-  imports: [CommonModule,HttpClientModule],
-  declarations: [ChatAvatarComponent, ChatWidgetComponent, ChatInputComponent],
-  providers: [DataService],
-  exports: [ChatWidgetComponent],
-  entryComponents: [ChatWidgetComponent],
+    imports: [CommonModule, HttpClientModule],
+    declarations: [ChatAvatarComponent, ChatWidgetComponent, ChatInputComponent],
+    providers: [DataService],
+    exports: [ChatWidgetComponent]
 })
 export class ChatModule {}
