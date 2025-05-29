@@ -293,13 +293,17 @@
       padding-top: 1%;
       display: flex;
       flex-wrap: wrap;
-
+      justify-content: center;
       mat-card {
         width: 18vw;
         background-color: transparent;
         float: left;
         margin: 10px;
-
+        padding: 16px;
+        font-family: Roboto,
+          Helvetica Neue,
+          sans-serif;
+        box-shadow: var(--mat-app-elevation-shadow-level-8, none);
         .logo {
           // padding: 0.2rem 2rem;
 
