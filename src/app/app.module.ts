@@ -11,7 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { ElementModule } from './element.module';
 import { DemosComponent } from './components/demos/demos.component';
-import { MatTableModule } from '@angular/material/table';
+import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
 
 @NgModule({
   declarations: [
