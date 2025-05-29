@@ -1,6 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ParticlesConfig } from './particles-config';
 import { DataService } from 'src/app/chat/data.service';
 
@@ -101,9 +101,9 @@ export class HomeComponent implements OnInit {
   }];
   selectedIndex = -1;
   defaultLogoColor = '#000000de';
-  myForm: FormGroup = null as any;
+  myForm: UntypedFormGroup = null as any;
 
-  constructor(private fb: FormBuilder, private viewportScroller: ViewportScroller, private data: DataService) { }
+  constructor(private fb: UntypedFormBuilder, private viewportScroller: ViewportScroller, private data: DataService) { }
 
   ngOnInit(): void {
     AOS.init();
