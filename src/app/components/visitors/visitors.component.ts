@@ -11,9 +11,10 @@ export interface PeriodicElement {
   symbol: string;
 }
 @Component({
-  selector: 'app-visitors',
-  templateUrl: './visitors.component.html',
-  styleUrls: ['./visitors.component.scss']
+    selector: 'app-visitors',
+    templateUrl: './visitors.component.html',
+    styleUrls: ['./visitors.component.scss'],
+    standalone: false
 })
 export class VisitorsComponent implements OnInit {
   displayedColumns: string[] = ['Id', 'Name', 'Email', 'Message', 'Visited On'];

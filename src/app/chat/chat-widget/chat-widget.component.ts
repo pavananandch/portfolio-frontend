@@ -4,10 +4,11 @@ import { fadeIn, fadeInOut } from '../animations'
 import { DataService } from '../data.service'
 
 @Component({
-  selector: 'chat-widget',
-  templateUrl: './chat-widget.component.html',
-  styleUrls: ['./chat-widget.component.css'],
-  animations: [fadeInOut, fadeIn],
+    selector: 'chat-widget',
+    templateUrl: './chat-widget.component.html',
+    styleUrls: ['./chat-widget.component.css'],
+    animations: [fadeInOut, fadeIn],
+    standalone: false
 })
 export class ChatWidgetComponent implements OnInit {
   @ViewChild('bottom') bottom: ElementRef = null as any;
