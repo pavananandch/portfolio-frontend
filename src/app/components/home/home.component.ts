@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ParticlesConfig } from './particles-config';
 import { DataService } from 'src/app/chat/data.service';
 
-declare let particlesJS: any;
+// declare let particlesJS: any;
 declare let AOS: any;
 
 @Component({
@@ -120,7 +120,7 @@ export class HomeComponent implements OnInit {
   }
 
   public invokeParticles(): void {
-    particlesJS('particles-js', ParticlesConfig, function () { });
+    // particlesJS('particles-js', ParticlesConfig, function () { });
   }
 
   public async submitHandler(){
