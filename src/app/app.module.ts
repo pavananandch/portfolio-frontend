@@ -11,7 +11,6 @@ import { SharedModule } from './shared/shared.module';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { ElementModule } from './element.module';
 import { DemosComponent } from './components/demos/demos.component';
-import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
 
 @NgModule({
   declarations: [
@@ -30,6 +29,6 @@ import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy
     ElementModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
