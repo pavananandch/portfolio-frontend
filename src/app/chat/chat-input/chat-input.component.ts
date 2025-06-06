@@ -21,7 +21,7 @@ export class ChatInputComponent implements OnInit {
   @ViewChild('message', { static: true }) message: ElementRef = null as any;
 
   ngOnInit() {
-    this.focus.subscribe(() => this.focusMessage())
+    this.focus?.subscribe(() => this.focusMessage())
   }
 
   public focusMessage() {

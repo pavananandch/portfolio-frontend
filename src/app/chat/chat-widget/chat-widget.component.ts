@@ -59,7 +59,7 @@ export class ChatWidgetComponent implements OnInit {
 
   public scrollToBottom() {
     if (this.bottom !== undefined) {
-      this.bottom.nativeElement.scrollIntoView()
+      this.bottom.nativeElement.scrollIntoView({behavior: 'smooth', block: 'end'})
     }
   }
 
@@ -89,13 +89,17 @@ export class ChatWidgetComponent implements OnInit {
     this.addMessage(this.client, message, 'sent')
     this.dataService.getbotResponse(obj).subscribe(res => {
       if(res) {
-        const botResponse = res.output.generic[0].text;      
-        this._sessionId = res.context.global.session_id;
+        const botResponse = res.bot;
+        this._sessionId = res.sessionId;
         console.log(this._sessionId);
-         
-        this.addMessage(this.operator, botResponse, 'received')
+
+        this.addMessage(this.operator, botResponse, 'received');
+        setTimeout(() => {
+          this.scrollToBottom();
+          this.focusMessage();
+        }, 1000);
       }
-      
+
     }, err => {
       console.log({err})
     })

@@ -3,7 +3,7 @@
   <div class="title">
     <div>Hello, I'm <span>Pavan Anand.</span></div>
     <div>I'm a full-stack web developer.</div>
-    <button mat-button (click)="goToAbout()">View my work <mat-icon>arrow_forward</mat-icon></button>
+    <button matButton="outlined" (click)="goToAbout()">View my work <mat-icon>arrow_forward</mat-icon></button>
   </div>
 
   <div class="aboutme" id="aboutme">
@@ -16,7 +16,7 @@
       <div class="text">
         <h4>Senior Software Engineer</h4>
         <p class="description" data-aos="fade-left">
-          A self-motivated and passionate software engineer with 7 years of experience, collaborating on application
+          A self-motivated and passionate software engineer with 7+ years of experience, collaborating on application
           design, development, testing, implementation, and research. Expert in management of full software
           development life-cycle for major client projects, including requirements analysis and architecture design.
           Adept at ensuring desired outcomes through detailed planning, implementation, and post-implementation
@@ -98,9 +98,14 @@
           </ul>
           <div class="download-cv">
             <h4>Download My CV</h4>
-            <button (click)="downloadResume()" mat-fab color="primary" aria-label="Download CV">
-              <mat-icon>download</mat-icon>
-            </button>
+            <div class="wave-btn-wrapper">
+              <button (click)="downloadResume()" mat-fab color="primary" aria-label="Download CV" class="wave-btn">
+                <mat-icon>download</mat-icon>
+              </button>
+              <span class="wave wave1"></span>
+              <span class="wave wave2"></span>
+              <span class="wave wave3"></span>
+            </div>
           </div>
         </div>
       </div>
