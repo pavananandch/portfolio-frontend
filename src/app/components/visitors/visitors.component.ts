@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 import { DataService } from 'src/app/chat/data.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface PeriodicElement {
   name: string;
@@ -11,9 +11,10 @@ export interface PeriodicElement {
   symbol: string;
 }
 @Component({
-  selector: 'app-visitors',
-  templateUrl: './visitors.component.html',
-  styleUrls: ['./visitors.component.scss']
+    selector: 'app-visitors',
+    templateUrl: './visitors.component.html',
+    styleUrls: ['./visitors.component.scss'],
+    standalone: false
 })
 export class VisitorsComponent implements OnInit {
   displayedColumns: string[] = ['Id', 'Name', 'Email', 'Message', 'Visited On'];
@@ -30,13 +31,13 @@ export class VisitorsComponent implements OnInit {
       next: (res) => {
         console.log({res});
         this.dataSource = new MatTableDataSource(res.data);
-      }, 
+      },
       error: (err) => {
         console.log({err});
       }
     })
   }
-  
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;

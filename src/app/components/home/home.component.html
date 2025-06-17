@@ -3,7 +3,7 @@
   <div class="title">
     <div>Hello, I'm <span>Pavan Anand.</span></div>
     <div>I'm a full-stack web developer.</div>
-    <button mat-button (click)="goToAbout()">View my work <mat-icon>arrow_forward</mat-icon></button>
+    <button matButton="outlined" (click)="goToAbout()">View my work <mat-icon>arrow_forward</mat-icon></button>
   </div>
 
   <div class="aboutme" id="aboutme">
@@ -16,7 +16,7 @@
       <div class="text">
         <h4>Senior Software Engineer</h4>
         <p class="description" data-aos="fade-left">
-          A self-motivated and passionate software engineer with 7 years of experience, collaborating on application
+          A self-motivated and passionate software engineer with 7+ years of experience, collaborating on application
           design, development, testing, implementation, and research. Expert in management of full software
           development life-cycle for major client projects, including requirements analysis and architecture design.
           Adept at ensuring desired outcomes through detailed planning, implementation, and post-implementation
@@ -98,9 +98,14 @@
           </ul>
           <div class="download-cv">
             <h4>Download My CV</h4>
-            <button (click)="downloadResume()" mat-fab color="primary" aria-label="Download CV">
-              <mat-icon>download</mat-icon>
-            </button>
+            <div class="wave-btn-wrapper">
+              <button (click)="downloadResume()" mat-fab color="primary" aria-label="Download CV" class="wave-btn">
+                <mat-icon>download</mat-icon>
+              </button>
+              <span class="wave wave1"></span>
+              <span class="wave wave2"></span>
+              <span class="wave wave3"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -129,26 +134,26 @@
       <div class="divider">
       </div>
       <div class="form-data">
-        <form>
+        <form [formGroup]="myForm">
           <div class="row center-align">Dear Pavan,</div>
           <div class="row">
-            <div class="col s12 l4 right-align rightToCenterText">My name is</div>
-            <div class="col s12 l4"><input class="inputBox" minlength="3" placeholder="(your name here)" required="" type="text"
+            <div class="col s12 l4 right-align rightToCenterText" >My name is</div>
+            <div class="col s12 l4"><input class="inputBox" formControlName="name" minlength="3" placeholder="(your name here)" required="" type="text"
                 value=""></div>
             <div class="col s12 l4 left-align leftToCenterText">and my</div>
           </div>
           <div class="row">
             <div class="col s12 l4 right-align rightToCenterText">email address is</div>
-            <div class="col s12 l4"><input class="inputBox" placeholder="(your email address)" required="" type="email"
+            <div class="col s12 l4"><input class="inputBox" formControlName="email" placeholder="(your email address)" required="" type="email"
                 value=""></div>
             <div class="col s12 l4 left-align leftToCenterText">I have a</div>
           </div>
           <div class="row">
             <div class="col s12 center-align" style="width: 100%;">message for you,</div>
-            <div class="col s12" style="width: 100%;"><textarea class="inputBox" id="textarea" placeholder="(your msg here)" required=""></textarea>
+            <div class="col s12" style="width: 100%;"><textarea class="inputBox" formControlName="message" id="textarea" placeholder="(your msg here)" required=""></textarea>
             </div>
           </div>
-          <div class="send-button center-align"><button name="action" ><svg aria-hidden="true" focusable="false"
+          <div class="send-button center-align"><button name="action" type="submit" title="send message" (click)="submitHandler()" ><svg aria-hidden="true" focusable="false"
                 data-prefix="fas" data-icon="paper-plane" class="svg-inline--fa fa-paper-plane fa-3x " role="img"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path fill="currentColor"

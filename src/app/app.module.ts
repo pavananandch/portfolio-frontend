@@ -11,7 +11,6 @@ import { SharedModule } from './shared/shared.module';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { ElementModule } from './element.module';
 import { DemosComponent } from './components/demos/demos.component';
-import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -30,6 +29,6 @@ import { MatTableModule } from '@angular/material/table';
     ElementModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,16 +1,17 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, ViewEncapsulation } from '@angular/core'
 
 @Component({
-  selector: 'chat-input',
-  template: `
+    selector: 'chat-input',
+    template: `
     <textarea type="text" class="chat-input-text" placeholder="Type message..."
               #message (keydown.enter)="onSubmit()" (keyup.enter)="message.value = ''" (keyup.escape)="dismiss.emit()"></textarea>
     <button type="submit" class="chat-input-submit" (click)="onSubmit()">
       {{buttonText}}
     </button>
   `,
-  encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./chat-input.component.css'],
+    encapsulation: ViewEncapsulation.None,
+    styleUrls: ['./chat-input.component.css'],
+    standalone: false
 })
 export class ChatInputComponent implements OnInit {
   @Input() public buttonText = '↩︎'
@@ -20,7 +21,7 @@ export class ChatInputComponent implements OnInit {
   @ViewChild('message', { static: true }) message: ElementRef = null as any;
 
   ngOnInit() {
-    this.focus.subscribe(() => this.focusMessage())
+    this.focus?.subscribe(() => this.focusMessage())
   }
 
   public focusMessage() {

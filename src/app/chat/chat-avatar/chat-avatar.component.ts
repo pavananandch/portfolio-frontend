@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core'
 
 @Component({
-  selector: 'chat-avatar',
-  template: `
+    selector: 'chat-avatar',
+    template: `
     <img [attr.src]="image" class="avatar" />
   `,
-  styles: [`
+    styles: [`
     .avatar {
       height: 30px;
       width: 30px;
@@ -13,7 +13,8 @@ import { Component, Input } from '@angular/core'
       float: left;
       margin-right: 10px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class ChatAvatarComponent {
   @Input() public image: string = '';
