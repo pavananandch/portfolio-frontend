@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from './chat/data.service';
 
 @Component({
     selector: 'app-root',
@@ -26,7 +27,13 @@ export class AppComponent {
 
   public theme: 'blue' | 'grey' | 'red' = 'blue';
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private dataService:DataService) {
+    this.dataService.awakeServer()
+    .subscribe((resp) => {
+      console.log('Server is awake', resp);
+    }, (err) => {
+      console.error('Error waking server', err);
+    });
     navigator.geolocation.getCurrentPosition(resp => {
       const location = {lng: resp.coords.longitude, lat: resp.coords.latitude};
       // this.$gaService.event('VIEW', location.lng + '' + location.lat, 'Name');
