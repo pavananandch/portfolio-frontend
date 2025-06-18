@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { ElementModule } from './element.module';
 import { DemosComponent } from './components/demos/demos.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DemosComponent } from './components/demos/demos.component';
     HomeComponent,
     VisitorsComponent,
     DemosComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid p-0">
     <h1>Projects List</h1>
     <div class="divider"></div>
     <div class="cards">
@@ -6,7 +6,7 @@
             <mat-card-header>
               <mat-card-title>{{project.name}}</mat-card-title>
             </mat-card-header>
-            <img style="width: 100%;" mat-card-image [src]="project.img" [alt]="project.name">
+            <img mat-card-image [src]="project.img" [alt]="project.name" title="{{project.name}}">
             <mat-card-actions>
               <a mat-raised-button color="primary" target="_blank" [href]="project.repoUrl"><mat-icon>code</mat-icon> Code</a>
               <a mat-raised-button color="accent" target="_blank" [href]="project.demoUrl"><mat-icon>visibility</mat-icon> Demo</a>

@@ -34,7 +34,7 @@
     -webkit-animation: 2s 2s infinite bounce;
     -webkit-transition: 0.2s ease-in;
     margin-top: 10px;
-    padding: 15px 10px;
+    padding: 5px 10px;
     position: relative;
     background: transparent;
     font-family: monospace;
@@ -237,6 +237,7 @@
         margin-bottom: 20px;
         position: relative;
         display: list-item;
+        text-align: match-parent;
         text-align: -webkit-match-parent;
 
         .timeline-panel {

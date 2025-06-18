@@ -1,6 +1,9 @@
 .example-card {
   max-width: 400px;
 }
+img {
+  width: 100%;
+}
 
 .example-header-image {
   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
@@ -9,9 +12,12 @@
 
 mat-card-header {
   min-height: 9vh;
+  mat-card-title {
+    font-size: large;
+  }
 }
 
-.container {
+.container-fluid {
   .divider {
     opacity: 0.1;
   }

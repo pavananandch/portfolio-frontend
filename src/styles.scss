@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-
+// @import "@coreui/coreui/scss/coreui";
+// @import 'bootstrap/dist/css/bootstrap.min.css';
 html,
 body {
   height: 100%;
@@ -11,6 +12,17 @@ body {
   margin: 0;
   font-family: monospace !important;
 }
+
+.carousel-inner {
+  background-color: #023f5c !important;
+}
+
+.carousel-item {
+  background-color: transparent !important;
+  transition: transform 0.6s ease-in-out; /* Optional: smooth sliding */
+}
+
+
 
 .navbar {
   background: transparent !important;
