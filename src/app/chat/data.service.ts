@@ -6,9 +6,9 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
   providedIn: 'root',
 })
 export class DataService {
-  // baseURL = "http://localhost:8000/";
+  baseURL = "http://localhost:8000/";
   // baseURL = "https://portfolio-backend-dsp9.onrender.com/";
-  baseURL = 'https://starlit-booster-463211-h3.el.r.appspot.com/';
+  // baseURL = 'https://starlit-booster-463211-h3.el.r.appspot.com/';
   constructor(private http: HttpClient) {}
 
   getbotResponse(body: any): Observable<any> {

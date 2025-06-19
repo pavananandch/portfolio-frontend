@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AnalyticsService } from 'src/app/services';
 
 @Component({
   selector: 'app-carousel',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnInit {
   images = [
     {
       src: 'https://firebasestorage.googleapis.com/v0/b/pavananand-portfolio.appspot.com/o/workshop%2F1.jpg?alt=media&token=fcec66b2-1ef2-4291-af23-8ae76658f761',
@@ -53,4 +54,32 @@ export class CarouselComponent {
       alt: 'Image 3',
     },
   ];
+
+  constructor(private analyticsService: AnalyticsService) {}
+  ngOnInit() {
+    // Initialization logic can go here if needed
+  }
+
+  onSelectImage(index: number) {
+    this.analyticsService.trackEvent('carousel_image_selected', {
+      category: 'carousel',
+      action: 'select',
+      label: index,
+    });
+  }
+
+  onPrev() {
+    this.analyticsService.trackEvent('carousel_prev_clicked', {
+      category: 'carousel',
+      action: 'click',
+      label: 'Workshop Images Carousel',
+    });
+  }
+  onNext() {
+    this.analyticsService.trackEvent('carousel_next_clicked', {
+      category: 'carousel',
+      action: 'click',
+      label: 'Workshop Images Carousel',
+    });
+  }
 }

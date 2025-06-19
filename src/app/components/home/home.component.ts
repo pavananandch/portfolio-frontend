@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ParticlesConfig } from './particles-config';
 import { DataService } from 'src/app/chat/data.service';
+import { AnalyticsService } from 'src/app/services';
 
 declare let particlesJS: any;
 declare let AOS: any;
@@ -101,8 +102,8 @@ export class HomeComponent implements OnInit {
       color: '#ffa611',
     },
     {
-      name: 'Heroku',
-      iconName: 'fas fa-cloud',
+      name: 'Java',
+      iconName: 'fab fa-java',
       color: '#6567a5',
     },
     {
@@ -142,10 +143,16 @@ export class HomeComponent implements OnInit {
   constructor(
     private fb: UntypedFormBuilder,
     private viewportScroller: ViewportScroller,
-    private data: DataService
+    private data: DataService,
+    private analyticsService: AnalyticsService
   ) {}
 
   ngOnInit(): void {
+    this.analyticsService.trackEvent('home_page_view', {
+      description: 'home page into view',
+      page_section: 'home',
+      debug_mode: true, // Optional: Useful for DebugView in GA4
+    });
     AOS.init();
     this.invokeParticles();
     this.initForm();
@@ -164,6 +171,12 @@ export class HomeComponent implements OnInit {
   }
 
   public async submitHandler() {
+    this.analyticsService.trackEvent('contact_form_submitted', {
+      description: 'home page into view',
+      page_section: 'home',
+      debug_mode: true, // Optional: Useful for DebugView in GA4
+    });
+
     const formValue = this.myForm.value;
     try {
       console.log({ formValue });
@@ -185,10 +198,20 @@ export class HomeComponent implements OnInit {
   }
 
   public goToAbout() {
+    this.analyticsService.trackEvent('about_section_clicked', {
+      description: 'home page into view',
+      page_section: 'home',
+      debug_mode: true, // Optional: Useful for DebugView in GA4
+    });
     this.viewportScroller.scrollToAnchor('aboutme');
   }
 
   downloadResume() {
+    this.analyticsService.trackEvent('resume_downloaded', {
+      description: 'home page into view',
+      page_section: 'home',
+      debug_mode: true, // Optional: Useful for DebugView in GA4
+    });
     const pdfUrl =
       'https://firebasestorage.googleapis.com/v0/b/pavananand-portfolio.appspot.com/o/pavan-anand-resume-2025.pdf?alt=media&token=08599233-ec55-489c-ab56-afc6c0d214e4';
 

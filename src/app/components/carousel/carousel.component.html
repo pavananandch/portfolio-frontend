@@ -4,6 +4,7 @@
     <li *ngFor="let image of images; let i = index"
       [attr.data-target]="'#carouselExampleIndicators'"
       [attr.data-slide-to]="i"
+      (click)="onSelectImage(i)"
       [ngClass]="{'active': i === 0}">
     </li>
   </ol>
@@ -27,11 +28,11 @@
     </div>
   </div>
 
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" (click)="onPrev()">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" (click)="onNext()">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>

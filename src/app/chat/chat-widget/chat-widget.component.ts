@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@
 import { Subject } from 'rxjs'
 import { fadeIn, fadeInOut } from '../animations'
 import { DataService } from '../data.service'
+import { AnalyticsService } from 'src/app/services';
 
 @Component({
     selector: 'chat-widget',
@@ -69,12 +70,22 @@ export class ChatWidgetComponent implements OnInit {
 
   ngOnInit() {
     // setTimeout(() => this.visible = true, 1000)
+    this.analyticsService.trackEvent('chat_widget_loaded', {
+      description: 'home page into view',
+      page_section: 'home',
+      debug_mode: true, // Optional: Useful for DebugView in GA4
+    });
     setTimeout(() => {
       this.addMessage(this.operator, 'Hi, how can we help you?', 'received')
     }, 1500)
   }
 
   public toggleChat() {
+  this.analyticsService.trackEvent('chat_widget_toggled', {
+    description: 'home page into view',
+    page_section: 'home',
+    debug_mode: true, // Optional: Useful for DebugView in GA4
+  });
     this.visible = !this.visible
   }
 
@@ -115,6 +126,6 @@ export class ChatWidgetComponent implements OnInit {
     }
   }
 
-  constructor(private dataService: DataService){}
+  constructor(private dataService: DataService, private analyticsService: AnalyticsService){}
 
 }
